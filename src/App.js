@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
-import {HashRouter,Route,Link} from'react-router-dom'
+import React, {Component} from 'react';
+import {HashRouter, Route, Link} from 'react-router-dom'
 
 import Me from './components/Me';
 import CardHolder from './components/CardHolder';
 import CardGroup from './components/CardGroup';
 import Order from './components/Order';
 import './App.css';
+
+import meSrc from './images/me-default.png'
+import cardHolderSrc from './images/card-default.png'
+import CardGroupSrc from './images/group-default.png'
+import OrderSrc from './images/order-default.png'
 class App extends Component {
     render() {
-        return(
+        return (
             <HashRouter>
                 <div>
                     <Route path="/me" component={Me}/>
@@ -16,10 +21,22 @@ class App extends Component {
                     <Route path="/cardGroup" component={CardGroup}/>
                     <Route path="/order" component={Order}/>
                     <div className="footer">
-                        <Link to="me" className="me">我</Link>
-                        <Link to="cardHolder">名片夹</Link>
-                        <Link to="cardGroup">群名片</Link>
-                        <Link to="order">订单</Link>                      
+                        <Link to="me" className="cardIconStyle">
+                            <img src={meSrc}></img>
+                            <div className="fontIconStyle">我</div>
+                        </Link>
+                        <Link to="cardHolder" className="cardIconStyle">
+                            <img src={cardHolderSrc}></img>
+                            <div className="fontIconStyle">名片夹</div>
+                        </Link>
+                        <Link to="cardGroup" className="cardIconStyle">
+                            <img src={CardGroupSrc}></img>
+                            <div className="fontIconStyle">群名片</div>
+                        </Link>
+                        <Link to="order" className="cardIconStyle">
+                            <img src={OrderSrc}></img>
+                            <div className="fontIconStyle">订单</div>
+                        </Link>
                     </div>
                 </div>
             </HashRouter>
