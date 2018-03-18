@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+.slider{
+    overflow:hidden;
+    position:relative;
+}
+
+.slider>ul{
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    left:0;
+    transition:left 1s;
+}

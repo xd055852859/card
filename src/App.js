@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {HashRouter, Route, Link} from 'react-router-dom'
 
-import Me from './components/Me';
-import CardHolder from './components/CardHolder';
-import CardGroup from './components/CardGroup';
-import Order from './components/Order';
+import Me from './contants/me/Me';
+import CardHolder from './contants/cardHolder/CardHolder';
+import CardGroup from './contants/cardGroup/CardGroup';
+import Order from './contants/Order';
 import './App.css';
 
 import meSrc from './images/me-default.png'
@@ -16,6 +16,7 @@ class App extends Component {
         return (
             <HashRouter>
                 <div>
+                    <div className="header">可信名片</div>
                     <Route path="/me" component={Me}/>
                     <Route path="/cardHolder" component={CardHolder}/>
                     <Route path="/cardGroup" component={CardGroup}/>

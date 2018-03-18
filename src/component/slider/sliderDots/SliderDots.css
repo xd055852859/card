@@ -1,0 +1,25 @@
+.slider-dot {
+    display: inline-block;
+    width:6px;
+    height:6px;
+    border:3px solid #ccc;
+    margin:6px;
+    cursor:pointer;
+    border-radius:20px;
+}
+
+.slider-dot:hover{
+    border:3px solid #868686;
+}
+
+.slider-dots-wrap{
+    z-index:99;
+    text-align: center;
+    width:100%;
+    position:absolute;
+    bottom:0;
+}
+
+.slider-doy-selected{
+    background:#ccc;
+}

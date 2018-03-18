@@ -1,0 +1,21 @@
+.nav{
+    background-color: #1EA084;
+    display:flex;
+    height:110px;
+}
+
+.navIcon{
+    display: fixed;
+    flex:0 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;    
+}
+
+.nav img{
+    height:40px;
+    width:40px;
+    margin-bottom:10px;
+}
