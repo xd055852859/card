@@ -2,6 +2,7 @@ import React from 'react';
 import './Me.css';
 import Slider from './../../component/slider/Slider'
 import Avatar from './../../component/avatar/Avatar'
+import BaseMsg from './../../component/baseMsg/BaseMsg'
 
 import ScanSrc from './../../images/scanIcon.png'
 import CodeSrc from './../../images/codeIcon.png'
@@ -20,12 +21,14 @@ const IMAGE_DATA = [
         alt: "images-3"
     }
 ]
-let avatar = {
-    src: require('./../../images/avatar.jpg'),
-    alt: "avatar"
-};
-
-let nickName = "嘿嘿嘿";
+let userInfo = {
+    avatar: {
+        src: require('./../../images/avatar.jpg'),
+        alt: "avatar"
+    },
+    nickName: "嘿嘿嘿",
+    insterest: ["运动","旅游","美食" ]
+}
 
 class Me extends React.Component {
     render() {
@@ -51,10 +54,13 @@ class Me extends React.Component {
                     </div>
                 </div>
                 <Slider items={IMAGE_DATA} speed={1.2} delay={2.1} pause={true} autoplay={true} dots={true} arrows={true}/>
-                <Avatar className="" avatar={avatar} nickName={nickName}/>
+                <Avatar className="" userInfo={userInfo}/>
+                <BaseMsg className="" userInfo={userInfo}/>
             </div>
         )
-    }
+
+    };
+
 }
 
 export default Me;
